@@ -18,10 +18,7 @@ export const getUniqueBook = async (
 
     if (!book) throw new ErrorHandler('Book not found', 404)
 
-    const delay = Math.random() * 4000
-    setTimeout(() => {
-        return res.status(200).json({ book })
-    }, delay)
+    return res.status(200).json({ book })
 }
 
 const purchase = async (id: number) => {
